@@ -3,15 +3,15 @@ rootProject.ext.JAVA_TARGET_VERSION = JavaVersion.VERSION_1_8
 
 rootProject.ext {
 
-    APPLICATION_ID = "com.smartpdftools.pdfconverterpro"
+    APPLICATION_ID = "com.zoha131.app"
     APP_VERSION = "1.0.1"
     APP_VERSION_CODE = 1
 
-    COMPONENT_ID = "com.smartpdftools.android.component"
+    COMPONENT_ID = "com.zoha131.component"
     COMPONENT_VERSION = "1.0.1"
     COMPONENT_VERSION_CODE = 1
 
-    SAMPLE_ID = "com.smartpdftools.android.sample"
+    SAMPLE_ID = "com.zoha131.sample"
 
     TARGET_SDK_VERSION = 29
     COMPILE_SDK_VERSION = 29

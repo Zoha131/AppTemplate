@@ -57,7 +57,6 @@ dependencyUpdates {
 
     checkForGradleUpdate = true
 
-    // Example 3: using the full syntax
     resolutionStrategy {
         componentSelection {
             all {
@@ -67,4 +66,9 @@ dependencyUpdates {
             }
         }
     }
+
+     /*
+     * Command to check new version
+     * ./gradlew dependencyUpdates -Drevision=release -DoutputFormatter=json,xml
+     */
 }
