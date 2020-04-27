@@ -1,7 +1,6 @@
 package com.conceptgang.component.model
 
 import androidx.annotation.ColorRes
-import com.conceptgang.component.R
 
 data class EpoxyData(
     val paddingLeftDp: Int,
