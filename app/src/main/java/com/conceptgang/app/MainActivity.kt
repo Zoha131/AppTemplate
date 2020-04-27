@@ -1,4 +1,4 @@
-package com.conceptgang.zhapptemplate
+package com.conceptgang.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

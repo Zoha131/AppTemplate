@@ -1,4 +1,4 @@
-package com.conceptgang.zhapptemplate
+package com.conceptgang.app
 
 import org.junit.Test
 
