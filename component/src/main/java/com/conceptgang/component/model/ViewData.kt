@@ -8,7 +8,7 @@ import java.security.InvalidParameterException
 import java.util.*
 
 
-typealias ZHViewCallback = (Int, ViewData)->Unit
+typealias ViewCallback = (Int, ViewData, Any?)->Unit
 
 
 sealed class ViewData {
