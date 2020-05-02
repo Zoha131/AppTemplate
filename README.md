@@ -2,7 +2,9 @@
 
 ### ViewData
 1. Every parameter of ViewData should be as such that user can define that without context
-2. Color should te taken as ColorRes parameter. If you need different alfa value of same color then use colorDrawable to do that. 
+2. Color should te taken as ColorRes parameter. If you need different alpha value of same color then use colorDrawable to do that. 
+4. ColorStateList won't work as view background. It will crash on API 28 and bellow. To work around this use the method bellow
+<img src="./doc/assets/color_state_list.png" width="400">
 If you want to use theme color you can definitely do that. Just create another colorDrawable using that attribute.
 3. Drawable should be taken as DrawableRes parameter
 4. Image should be taken ar url.
@@ -56,6 +58,7 @@ better tooling support use ```tools:parentTag``` attribute
 ### Naming convention
 1. Name of any view style will start by ```Widget.AppComponent```
 2. Name of any theme style will start by ```Theme.AppComponent``` 
+2. Name of any theme overlay style will start by ```ThemeOverlay.AppComponent``` 
 3. Name of any textAppearance will start by ```TextAppearance.AppComponent```
 4. For the variable in kotlin use CamelCase
 5. For the id in xml use underscore to separate two words
@@ -74,7 +77,7 @@ add ```height``` and ```width``` attribute. Find more [here](https://stackoverfl
 ### Resource File convention
 1. type.xml for TexAppearance
 2. styles.xml for View Styles
-3. themes.xml for Themes
+3. themes.xml for Themes and ThemeOverlay
 4. Other files as usual
 
 

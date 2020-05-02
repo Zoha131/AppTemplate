@@ -20,9 +20,15 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toolbar
+import androidx.annotation.AttrRes
 import androidx.annotation.ColorInt
+import androidx.annotation.Dimension
 import androidx.annotation.StyleRes
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.getColorOrThrow
+import androidx.core.content.res.getDimensionOrThrow
+import androidx.core.content.res.getDimensionPixelSizeOrThrow
+import androidx.core.content.res.use
 import androidx.core.graphics.ColorUtils
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
@@ -59,28 +65,16 @@ val <T> T.exhaustive: T
     get() = this
 
 
-fun Context.getColorFromStyleAttr(attr: Int): Int {
-    val typedValue = TypedValue()
-
-    theme.resolveAttribute(attr, typedValue, true)
-    val colorRes = typedValue.resourceId
-
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-        resources.getColor(colorRes, theme)
-    } else {
-        resources.getColor(colorRes)
-    }
+@ColorInt
+fun Context.getThemeColor(@AttrRes attr: Int): Int {
+    return obtainStyledAttributes(intArrayOf(attr)).use { it.getColorOrThrow(0) }
 }
 
-fun Context.getDimenFromStyleAttr(attr: Int): Int {
-    val typedValue = TypedValue()
-
-    theme.resolveAttribute(attr, typedValue, true)
-    val dimenRes = typedValue.resourceId
-
-    return resources.getDimensionPixelSize(dimenRes)
-
+@Dimension
+fun Context.getThemeDimen(@AttrRes attr: Int): Int {
+    return obtainStyledAttributes(intArrayOf(attr)).use { it.getDimensionPixelSizeOrThrow(0) }
 }
+
 
 fun ImageView.changeImageColor(@ColorInt colorInt: Int) {
     val porterDuffColorFilter = PorterDuffColorFilter(colorInt, PorterDuff.Mode.SRC_ATOP)
@@ -105,7 +99,7 @@ fun Uri.getName(contentResolver: ContentResolver): String {
         this, null, null, null, null, null
     )
 
-    var displayName:String = "unknown"
+    var displayName: String = "unknown"
 
     try {
         cursor?.use {
@@ -118,7 +112,7 @@ fun Uri.getName(contentResolver: ContentResolver): String {
                 displayName = it.getString(it.getColumnIndex(OpenableColumns.DISPLAY_NAME))
             }
         }
-    } catch (ex: Exception){
+    } catch (ex: Exception) {
 
     }
 
@@ -136,7 +130,7 @@ fun Uri.getSize(contentResolver: ContentResolver): String {
         this, null, null, null, null, null
     )
 
-    var displaySize:String = "0"
+    var displaySize: String = "0"
 
     try {
         cursor?.use {
@@ -155,10 +149,12 @@ fun Uri.getSize(contentResolver: ContentResolver): String {
                     // Technically the column stores an int, but cursor.getString()
                     // will do the conversion automatically.
                     it.getString(sizeIndex)
-                } else { "0" }
+                } else {
+                    "0"
+                }
             }
         }
-    } catch (ex: Exception){
+    } catch (ex: Exception) {
 
     }
 
@@ -168,23 +164,24 @@ fun Uri.getSize(contentResolver: ContentResolver): String {
 
 fun Uri.getType(contentResolver: ContentResolver): String {
     val mime = MimeTypeMap.getSingleton()
-    var type:String = "unknown"
+    var type: String = "unknown"
 
     try {
         mime.getExtensionFromMimeType(contentResolver.getType(this))?.let { type = it }
-    } catch (ex: Exception){
+    } catch (ex: Exception) {
 
     }
 
     return type
 }
 
-fun Set<Uri>.getTotalSize(contentResolver: ContentResolver): Long = this.map { it.getSize(contentResolver).toLong() }.sum()
+fun Set<Uri>.getTotalSize(contentResolver: ContentResolver): Long =
+    this.map { it.getSize(contentResolver).toLong() }.sum()
 
-fun TextView.zhTextAppearance(@StyleRes textAppearance: Int){
+fun TextView.setUpTextAppearance(@StyleRes textAppearance: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         setTextAppearance(textAppearance)
-    } else{
+    } else {
         setTextAppearance(context, textAppearance)
     }
 }
