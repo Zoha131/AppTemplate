@@ -1,4 +1,4 @@
-# Product Structure
+# App Template
 
 ### ViewData
 1. Every parameter of ViewData should be as such that user can define that without context
@@ -9,9 +9,9 @@ If you want to use theme color you can definitely do that. Just create another C
 4. Image should be taken ar url.
 4. String should be taken as ViewString type specified in the component module. This abstract both StringRes and raw String.
 6. Any dimension should be taken as dp int.
-7. If at the end you need to set data as String to the view then use ViewString for that kind of data
+7. If at the end you need to set data as String to the view then use ViewString for that kind of data 
 
-<img src="./doc/assets/color_state_list.png" width="400">
+<img src="./doc/assets/color_state_list.png" width="600">
 
 ### Navigation Views
 1. All the navigation related views should be in the activity layout inside coordinator layout. e.g. 
@@ -61,11 +61,15 @@ better tooling support use ```tools:parentTag``` attribute
 2. Name of any theme style will start by ```Theme.AppComponent``` 
 2. Name of any theme overlay style will start by ```ThemeOverlay.AppComponent``` 
 3. Name of any textAppearance will start by ```TextAppearance.AppComponent```
+3. Name of any shapeAppearance will start by ```ShapeAppearance.AppComponent```
+3. Name of any shapeAppearanceOverLay will start by ```ShapeAppearanceOverLay.AppComponent```
+4. Use literal name for color, dimension, string or any other resources. 
+e.g. button_medium_height, main_brand_color etc
 4. For the variable in kotlin use CamelCase
 5. For the id in xml use underscore to separate two words
 
 
-### View Re-Usability
+### View and Style Re-Usability
 1. To re-use same view use either style or include tag along with the merge tag
 2. If you want to use the same single view in multiple xml then define all the 
 similar attribute in style and just add that style to that view in every xml
@@ -74,6 +78,8 @@ use ````merge```` tag.
 4. If you want to add ConstraintLayout's constrain to the ```include``` tag then you have to must
 add ```height``` and ```width``` attribute. Find more [here](https://stackoverflow.com/questions/43676415/how-to-include-constraint-layout-to-another-constraint-layout-and-set-constraint)
 5. Also don't forget about dimen to reuse same height and width
+6. To know more about styling view [this video](https://www.youtube.com/watch?v=Owkf8DhAOSo)
+8. Material [theme attributes](https://material.io/components/android/theming/color/)
 
 ### Resource File convention
 1. type.xml for TexAppearance
