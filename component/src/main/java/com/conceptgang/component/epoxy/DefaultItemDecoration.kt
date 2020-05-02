@@ -10,7 +10,7 @@ import com.conceptgang.component.model.ViewData
 import com.conceptgang.component.util.px
 
 class DefaultItemDecoration: RecyclerView.ItemDecoration(){
-    private var views: List<ViewData> = emptyList()
+    var views: List<ViewData> = emptyList()
 
     private val paint = Paint().apply {
         color = Color.parseColor("#EBEBF1")
