@@ -60,3 +60,27 @@ better tooling support use ```tools:parentTag``` attribute
 4. For the variable in kotlin use CamelCase
 5. For the id in xml use underscore to separate two words
 
+
+### View Re-Usability
+1. To re-use same view use either style or include tag along with the merge tag
+2. If you want to use the same single view in multiple xml then define all the 
+similar attribute in style and just add that style to that view in every xml
+3. If you want to use a group of views in multiple xml then use ```include``` tag to do that. You can
+use ````merge```` tag.
+4. If you want to add ConstraintLayout's constrain to the ```include``` tag then you have to must
+add ```height``` and ```width``` attribute. Find more [here](https://stackoverflow.com/questions/43676415/how-to-include-constraint-layout-to-another-constraint-layout-and-set-constraint)
+5. Also don't forget about dimen to reuse same height and width
+
+
+
+
+
+
+
+
+
+
+
+
+
+
