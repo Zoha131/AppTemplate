@@ -4,13 +4,14 @@
 1. Every parameter of ViewData should be as such that user can define that without context
 2. Color should te taken as ColorRes parameter. If you need different alpha value of same color then use ColorStateList to do that. 
 If you want to use theme color you can definitely do that. Just create another ColorStateList using that attribute.
-4. ColorStateList won't work as view background. It will crash on API 28 and bellow. To work around this use the method bellow
-<img src="./doc/assets/color_state_list.png" width="400">
+4. ColorStateList won't work as view background. It will crash on API 28 and bellow. To work around this use the method in the image bellow
 3. Drawable should be taken as DrawableRes parameter
 4. Image should be taken ar url.
 4. String should be taken as ViewString type specified in the component module. This abstract both StringRes and raw String.
 6. Any dimension should be taken as dp int.
 7. If at the end you need to set data as String to the view then use ViewString for that kind of data
+
+<img src="./doc/assets/color_state_list.png" width="400">
 
 ### Navigation Views
 1. All the navigation related views should be in the activity layout inside coordinator layout. e.g. 
