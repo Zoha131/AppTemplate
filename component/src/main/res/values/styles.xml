@@ -1,58 +1,58 @@
 <resources>
 
     <style name="TextAppearance.AppCompnent.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--96sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--60sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--48sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
-        <item name="fontFamily">@font/font_nunito_bold</item>
+        <item name="fontFamily">@font/font_nunito_bold</item><!--34sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="fontFamily">@font/font_nunito_semi_bold</item>
+        <item name="fontFamily">@font/font_nunito_semi_bold</item><!--24sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
-        <item name="fontFamily">@font/font_nunito_bold</item>
+        <item name="fontFamily">@font/font_nunito_bold</item><!--20sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Headline7" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="fontFamily">@font/font_nunito_semi_bold</item>
+        <item name="fontFamily">@font/font_nunito_semi_bold</item><!--16sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--16sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="fontFamily">@font/font_nunito_bold</item>
+        <item name="fontFamily">@font/font_nunito_bold</item><!--14sp-->
     </style>
     <style name="TextAppearance.AppCompnent.Body1" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--16sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Body2" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--14sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Caption" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--12sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="fontFamily">@font/font_nunito_bold</item>
+        <item name="fontFamily">@font/font_nunito_bold</item><!--14sp-->
     </style>
 
     <style name="TextAppearance.AppCompnent.Overline" parent="TextAppearance.MaterialComponents.Overline">
-        <item name="fontFamily">@font/font_nunito_regular</item>
+        <item name="fontFamily">@font/font_nunito_regular</item><!--10sp-->
     </style>
 
 
