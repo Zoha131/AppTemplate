@@ -30,6 +30,34 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+    <!--
+
+        <FrameLayout
+            android:id="@+id/loadingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/colorPrimary" />
+
+        </FrameLayout>
+
+        A global loading view can be set like this. When loading view will be visible then
+        other views won't take user input
+
+    -->
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigationView"
@@ -38,5 +66,16 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:itemIconSize="15dp" />
+
+    <!--
+        <include
+                android:id="@+id/navigation_body"
+                layout="@layout/navigation_body"/>
+
+    </com.google.android.material.navigation.NavigationView>
+
+    NavigationView can be also used as frame layout.
+    and the menu can be set as child instead of from the menu
+    -->
 
 </androidx.drawerlayout.widget.DrawerLayout>
