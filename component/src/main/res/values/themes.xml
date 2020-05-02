@@ -17,6 +17,9 @@
         <item name="textAppearanceButton">@style/TextAppearance.AppComponent.Button</item>
         <item name="textAppearanceOverline">@style/TextAppearance.AppComponent.Overline</item>
 
+        <item name="colorOnSurface">@color/textColor</item>
+        <item name="colorOnBackground">@color/textColor</item>
+
     </style>
 
 </resources>
