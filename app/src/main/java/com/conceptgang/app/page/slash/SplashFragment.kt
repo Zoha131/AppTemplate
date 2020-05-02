@@ -22,7 +22,7 @@ class SplashFragment : BaseFragment() {
     }
 
     override fun invalidate() {
-        TODO("Not yet implemented")
+        //TODO("Not yet implemented")
     }
 
 }
