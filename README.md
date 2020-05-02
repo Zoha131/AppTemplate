@@ -71,6 +71,12 @@ use ````merge```` tag.
 add ```height``` and ```width``` attribute. Find more [here](https://stackoverflow.com/questions/43676415/how-to-include-constraint-layout-to-another-constraint-layout-and-set-constraint)
 5. Also don't forget about dimen to reuse same height and width
 
+### Resource File convention
+1. type.xml for TexAppearance
+2. styles.xml for View Styles
+3. themes.xml for Themes
+4. Other files as usual
+
 
 
 
