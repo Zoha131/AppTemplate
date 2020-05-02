@@ -53,3 +53,8 @@ better tooling support use ```tools:parentTag``` attribute
 
 ```
 
+### Naming convention
+1. Name of any view style will start by ```Widget.AppComponent```
+2. Name of any theme style will start by ```Theme.AppComponent``` 
+3. Name of any textAppearance will start by ```TextAppearance.AppComponent```
+
