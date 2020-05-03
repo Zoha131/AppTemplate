@@ -87,6 +87,18 @@ add ```height``` and ```width``` attribute. Find more [here](https://stackoverfl
 3. themes.xml for Themes and ThemeOverlay
 4. Other files as usual
 
+### Creating new project from this template
+
+```bash
+
+sudo rm -R .git
+
+git init
+
+mv /home/user/oldname /home/user/newname
+
+```
+
 
 
 
