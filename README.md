@@ -67,6 +67,7 @@ better tooling support use ```tools:parentTag``` attribute
 e.g. button_medium_height, main_brand_color etc
 4. For the variable in kotlin use CamelCase
 5. For the id in xml use underscore to separate two words
+6. If you create any kind of shape drawable in AS then use `shape_` as prefix
 
 
 ### View and Style Re-Usability
