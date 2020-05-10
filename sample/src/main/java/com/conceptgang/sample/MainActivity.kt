@@ -5,12 +5,25 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.conceptgang.sample.fragment.FirstFragment
-import com.conceptgang.sample.fragment.RawComponentFragment
-import com.conceptgang.sample.fragment.SecondFragment
-import com.conceptgang.sample.fragment.ThirdFragment
+import com.conceptgang.component.model.ViewData
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
+
+class TestFragmentAdapter(
+    fa: FragmentActivity,
+    private val data: ArrayList<Pair<String, Class<out Fragment>>>
+) : FragmentStateAdapter(fa) {
+
+
+    override fun getItemCount(): Int = data.size
+
+    override fun createFragment(position: Int): Fragment {
+
+        return data[position].second.newInstance()
+
+    }
+
+}
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,18 +45,21 @@ class MainActivity : AppCompatActivity() {
 }
 
 
-class TestFragmentAdapter(
-    fa: FragmentActivity,
-    private val data: ArrayList<Pair<String, Class<out Fragment>>>
-) : FragmentStateAdapter(fa) {
+class FirstFragment : BaseFragment(){
+    override val viewData: List<ViewData> = listOf(
 
 
-    override fun getItemCount(): Int = data.size
+    )
+}
 
-    override fun createFragment(position: Int): Fragment {
+class SecondFragment : BaseFragment(){
+    override val viewData: List<ViewData> = listOf()
+}
 
-        return data[position].second.newInstance()
+class ThirdFragment : BaseFragment(){
+    override val viewData: List<ViewData> = listOf()
+}
 
-    }
+class RawComponentFragment : Fragment(R.layout.fragment_raw_component) {
 
 }
